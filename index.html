@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Turnos Médicos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Pantalla de Inicio/Login -->
+  <section id="screen-login" class="screen active">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="input-username" placeholder="Usuario" />
+    <input type="password" id="input-password" placeholder="Contraseña" />
+    <button id="btn-login">Iniciar sesión</button>
+  </section>
+
+  <!-- Pantalla de Selección de Especialidad/Médico/Fecha -->
+  <section id="screen-select-turn" class="screen">
+    <h2>Seleccionar Turno</h2>
+    <label for="specialty">Especialidad:</label>
+    <select id="specialty">
+      <option value="cardiologia">Cardiología</option>
+      <option value="dermatologia">Dermatología</option>
+      <option value="pediatria">Pediatría</option>
+    </select>
+
+    <label for="doctor">Médico:</label>
+    <select id="doctor">
+      <option value="dr-rodriguez">Dr. Rodríguez</option>
+      <option value="dr-lopez">Dra. López</option>
+    </select>
+
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" />
+
+    <button id="btn-confirm-turn">Confirmar Turno</button>
+  </section>
+
+  <!-- Pantalla de Confirmación de Turno -->
+  <section id="screen-confirm-turn" class="screen">
+    <h2>Turno Confirmado</h2>
+    <p>Tu turno ha sido registrado correctamente.</p>
+    <button id="btn-go-mis-turnos">Ver Mis Turnos</button>
+  </section>
+
+  <!-- Pantalla de Mis Turnos -->
+  <section id="screen-mis-turnos" class="screen">
+    <h2>Mis Turnos</h2>
+    <ul id="list-turns">
+      <!-- Aquí se mostrarán los turnos reservados -->
+    </ul>
+    <button id="btn-logout">Cerrar Sesión</button>
+  </section>
+
+  <!-- Pantalla Gestión Administrativa -->
+  <section id="screen-admin" class="screen">
+    <h2>Gestión Administrativa</h2>
+    <p>Aquí puedes ver y gestionar los turnos del día.</p>
+    <button id="btn-logout-admin">Cerrar Sesión</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
